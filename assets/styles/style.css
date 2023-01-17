@@ -13,10 +13,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 36px 135px 136px 135px;
+  padding: 36px 135px 0 135px;
+  margin-bottom: 90px;
 }
 
-.header__left {
+.header-left {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -62,13 +63,14 @@ body {
   align-items: center;
 }
 
-.main__top {
+.main-top {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 60px;
 }
 
-.main__top h1 {
+.main-top h1 {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 56px;
@@ -77,7 +79,7 @@ body {
   margin-bottom: 16px;
 }
 
-.main__top p {
+.main-top p {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -86,7 +88,7 @@ body {
   margin-bottom: 28px;
 }
 
-.main__top a {
+.main-top a {
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
@@ -98,7 +100,7 @@ body {
   padding: 10px 20px;
 }
 
-.main__top a:hover {
+.main-top a:hover {
   background-color: #2d3134;
   color: #fff;
 }
@@ -109,7 +111,14 @@ body {
   align-items: center;
 }
 
-.main__gallery {
+.main-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.main-gallery {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -117,74 +126,82 @@ body {
     "One Three Three Four Four"
     "Two Three Three Five Six";
   gap: 26px 30px;
-  padding: 135px;
+  padding: 0 135px;
 }
 
-.main__gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.main-gallery-one {
+  grid-area: One;
+  position: relative;
   border-radius: 20px;
 }
 
-.main__gallery__one {
-  grid-area: One;
-  background: linear-gradient(
-      180deg,
-      rgba(30, 30, 28, 0) 62%,
-      rgba(20, 20, 18, 0.9) 100%
-    ),
-    url(../img/grid-image-1.png);
-}
-
-.main__gallery__two {
+.main-gallery-two {
   grid-area: Two;
-  background: linear-gradient(
-      180deg,
-      rgba(30, 30, 28, 0) 62%,
-      rgba(20, 20, 18, 0.9) 100%
-    ),
-    url(../img/grid-image-2.png);
+  position: relative;
 }
 
-.main__gallery__three {
+.main-gallery-three {
   grid-area: Three;
-  background: linear-gradient(
-      180deg,
-      rgba(30, 30, 28, 0) 62%,
-      rgba(20, 20, 18, 0.9) 100%
-    ),
-    url(../img/grid-image-3.png);
+  position: relative;
 }
 
-.main__gallery__four {
+.main-gallery-four {
   grid-area: Four;
-  background: linear-gradient(
-      180deg,
-      rgba(30, 30, 28, 0) 62%,
-      rgba(20, 20, 18, 0.9) 100%
-    ),
-    url(../img/grid-image-4.png);
+  position: relative;
 }
 
-.main__gallery__five {
+.main-gallery-five {
   grid-area: Five;
-  background: linear-gradient(
-      180deg,
-      rgba(30, 30, 28, 0) 62%,
-      rgba(20, 20, 18, 0.9) 100%
-    ),
-    url(../img/grid-image-5.png);
+  position: relative;
 }
 
-.main__gallery__six {
+.main-gallery-six {
   grid-area: Six;
-  background: linear-gradient(
-      180deg,
-      rgba(30, 30, 28, 0) 62%,
-      rgba(20, 20, 18, 0.9) 100%
-    ),
-    url(../img/grid-image-6.png);
+  position: relative;
+}
+
+.rating {
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  left: 24px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+  background: #2d3134;
+  border-radius: 12px;
+}
+
+.rating:hover {
+  position: absolute;
+  z-index: 1;
+  color: #2d3134;
+  text-decoration: none;
+  background: white;
+  border-radius: 12px;
+}
+
+.vientam {
+  position: absolute;
+  z-index: 1;
+  bottom: 48px;
+  left: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.worefall {
+  position: absolute;
+  z-index: 1;
+  bottom: 14px;
+  left: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
 }
 
 .footer {
@@ -194,14 +211,14 @@ body {
   margin: 135px 0 55px 0;
 }
 
-.footer__left {
+.footer-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
 }
 
-.footer__left p {
+.footer-left p {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -210,18 +227,18 @@ body {
   color: #5b5f62;
 }
 
-.footer__right {
+.footer-right {
   display: flex;
   gap: 114px;
   justify-content: space-between;
 }
 
-.footer__right__info {
+.footer-right-info {
   display: flex;
   flex-direction: column;
 }
 
-.footer__right__info a {
+.footer-right-info a {
   text-decoration: none;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -231,7 +248,7 @@ body {
   color: #676a6c;
 }
 
-.footer__right__info h4 {
+.footer-right-info h4 {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
